@@ -43,14 +43,14 @@ public class LoginController {
 		// メアドとパスワードに一致するユーザー取得
 		UserInfo selectedUserInfo = usersService.selectUserInfo(email, password);
 
-		 // ユーザーが存在すればログイン、存在しなければエラー(タスク２)
-		  if (Objects.nonNull(selectedUserInfo)) {
-		   return "redirect:/home";
+		// ユーザーが存在すればログイン、存在しなければエラー(タスク２)
+		if (Objects.isNull(selectedUserInfo)) {
+			model.addAttribute("errorMessage", "メールアドレスとパスワードが一致しません");
+			return "login";
 
-		  } else {
-		   model.addAttribute("errorMessage", "メールアドレスとパスワードが一致しません");
-		   return "login";
-		  
+		} else {
+			return "redirect:/home";
+
 		}
 	}
 }
