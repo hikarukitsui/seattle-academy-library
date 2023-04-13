@@ -30,7 +30,7 @@ public class BooksService {
 	 * @return 書籍リスト
 	 */
 	public List<BookInfo> getBookList() {
-
+		
 		// TODO 書籍名の昇順で書籍情報を取得するようにSQLを修正（タスク３）
 		List<BookInfo> getedBookList = jdbcTemplate.query(
 				"SELECT * FROM books ORDER BY id, title, author, publisher, publish_date, isbn, description, thumbnail_url, thumbnail_name ASC",
