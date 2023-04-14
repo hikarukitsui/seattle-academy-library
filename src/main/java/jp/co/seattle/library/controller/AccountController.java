@@ -57,7 +57,7 @@ public class AccountController {
 				userInfo.setPassword(password);
 				usersService.registUser(userInfo);
 				return "redirect:/login";
-				
+
 			} else {
 				model.addAttribute("errorMessage", "パスワードが一致しません。");
 				return "createAccount ";
