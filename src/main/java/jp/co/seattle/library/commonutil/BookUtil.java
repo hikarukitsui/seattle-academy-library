@@ -53,9 +53,7 @@ public class BookUtil {
 	 */
 	private static boolean checkDate(String publishDate) {
 		try {
-			if (publishDate.isEmpty()) {
-				return true;
-			}
+
 			DateFormat formatter = new SimpleDateFormat("yyyyMMdd");
 			formatter.setLenient(false); // ←これで厳密にチェックしてくれるようになる
 			//TODO　取得した日付の形式が正しければtrue（タスク４）
