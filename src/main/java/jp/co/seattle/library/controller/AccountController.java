@@ -60,13 +60,13 @@ public class AccountController {
 
 			} else {
 				model.addAttribute("errorMessage", "パスワードが一致しません。");
-				return "createAccount ";
+				return "createAccount";
 			}
 		}
 
 		else {
 			model.addAttribute("errorMessage", "パスワードは8文字以上かつ半角英数字に設定してください。");
-			return "createAccount ";
+			return "createAccount";
 		}
 
 	}

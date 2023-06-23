@@ -82,6 +82,16 @@
                                             <input type="text" name="description">
                                         </c:if>
                                     </div>
+                                    <div>
+                                        <span>ジャンル</span><span class="care care1">任意</span> <select name="genre" value="${bookInfo.genre}">
+                                            <option value="" hidden></option>
+                                            <option value="小説">小説</option>
+                                            <option value="参考書">参考書</option>
+                                            <option value="漫画">漫画</option>
+                                            <option value="映画">映画</option>
+                                            <option value="ビジネス本">ビジネス本</option>
+                                        </select>
+                                    </div>
                                     <input type="hidden" id="bookId" name="bookId" value="${bookInfo.bookId}">
                                 </div>
                             </div>
